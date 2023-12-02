@@ -1,0 +1,1 @@
+p File.read('input.txt').split("\n").map { |l| l.split(': ') } .sum { |game, input| input.split("; ").all? { |hand| hand.split(", ").map { |balls| [balls.split(' ')[0].to_i, balls.split(' ')[1]] }.all? { |num, col| (col == 'red' && num <= 12) || (col == 'green' && num <= 13) || (col == 'blue' && num <= 14) } } ? game[5..].to_i : 0 }
