@@ -1,0 +1,1 @@
+p (0..(map = File.read('example.txt').split("\n")).length).each_with_index.sum { |line, y| line.chars.each_with_index { |c, x| c.match('/[0-9]/') && !line[(x-1).clamp(i, line.length)].match('/[0-9]/') && ( } }
